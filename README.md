@@ -48,7 +48,8 @@ Whether you need precise prayer times, a quick way to read the Quran, daily Athk
 
 | Floating Widget | Settings |
 |:---:|:---:|
-| <img src="data/floating Wedgit.png" alt="Widget" />| <img src="data/floating Wedgit-1.png" alt="Widget" />| <img src="data/floating Wedgit-2.png" alt="Widget" /> | <img src="data/Settings.png" alt="Settings" /> |
+| <img src="data/floating Wedgit.png" alt="Widget" />| <img src="data/floating Wedgit-1.png" alt="Widget" />|
+| <img src="data/floating Wedgit-2.png" alt="Widget" /> | <img src="data/Settings.png" alt="Settings" /> |
 
 ## 🛠️ Tech Stack
 
