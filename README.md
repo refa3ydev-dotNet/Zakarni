@@ -43,8 +43,8 @@ Whether you need precise prayer times, a quick way to read the Quran, daily Athk
 
 | Dashboard (Dark Mode) | Quran Reader |
 |:---:|:---:|
-| <img src="https://github.com/refa3ydev-dotNet/Zakarni/tree/fabb2d4e6083a476f460cdda75a965395583072f/data/Dashboard.png" alt="Dashboard" /> |
-<img src="https://github.com/refa3ydev-dotNet/Zakarni/tree/fabb2d4e6083a476f460cdda75a965395583072f/data/Quran Reader.png" alt="Quran Reader" /> |
+| <img src="data/Dashboard.png" alt="Dashboard" /> |
+<img src="data/Quran Reader.png" alt="Quran Reader" /> |
 
 | Floating Widget | Settings |
 |:---:|:---:|
