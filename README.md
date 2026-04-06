@@ -70,34 +70,10 @@ Whether you need precise prayer times, a quick way to read the Quran, daily Athk
 * [Visual Studio 2022](https://visualstudio.microsoft.com/) (17.8+) with the **.NET desktop development** and **Windows application development** workloads installed.
 * .NET 8.0 SDK.
 
-### Building from Source
-
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/yourusername/Zakarni.git
-   cd Zakarni
-   ```
-
-2. **Open the Solution:**
-   Open `Zakarni.slnx` or `Zakarni.sln` in Visual Studio 2022.
-
-3. **Restore Dependencies:**
-   Visual Studio should automatically restore NuGet packages. If not, right-click the solution and select "Restore NuGet Packages".
-
-4. **Build and Run:**
-   Set `Zakarni.UI` as the Startup Project. Select your target architecture (e.g., `x64`) and click **Start (F5)** to build and launch the application.
-
-## 🤝 Contributing
-
-Contributions, issues, and feature requests are welcome! 
-Feel free to check [issues page](https://github.com/yourusername/Zakarni/issues) if you want to contribute.
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
+### How to Download
+1. Go to the [Releases page](https://github.com/refa3ydev-dotNet/Zakarni/releases/tag/Zakarni).              │
+2. Download the latest `Zakarni.zip` or `.exe` installer.           │
+3. Extract the contents (if zip) and run `Zakarni.UI.exe`.   
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
