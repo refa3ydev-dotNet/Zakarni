@@ -43,11 +43,12 @@ Whether you need precise prayer times, a quick way to read the Quran, daily Athk
 
 | Dashboard (Dark Mode) | Quran Reader |
 |:---:|:---:|
-| <img src="https://via.placeholder.com/600x350.png?text=Dashboard+Screenshot" alt="Dashboard" /> | <img src="https://via.placeholder.com/600x350.png?text=Quran+Reader+Screenshot" alt="Quran Reader" /> |
+| <img src="https://github.com/refa3ydev-dotNet/Zakarni/tree/fabb2d4e6083a476f460cdda75a965395583072f/data/Dashboard.png" alt="Dashboard" /> |
+<img src="https://github.com/refa3ydev-dotNet/Zakarni/tree/fabb2d4e6083a476f460cdda75a965395583072f/data/Quran Reader.png" alt="Quran Reader" /> |
 
 | Floating Widget | Settings |
 |:---:|:---:|
-| <img src="https://via.placeholder.com/600x350.png?text=Widget+Screenshot" alt="Widget" /> | <img src="https://via.placeholder.com/600x350.png?text=Settings+Screenshot" alt="Settings" /> |
+| <img src="https://github.com/refa3ydev-dotNet/Zakarni/tree/fabb2d4e6083a476f460cdda75a965395583072f/data/floating Wedgit.png" alt="Widget" />| <img src="https://github.com/refa3ydev-dotNet/Zakarni/tree/fabb2d4e6083a476f460cdda75a965395583072f/data/floating Wedgit-1.png" alt="Widget" />| <img src="https://github.com/refa3ydev-dotNet/Zakarni/tree/fabb2d4e6083a476f460cdda75a965395583072f/data/floating Wedgit-2.png" alt="Widget" /> | <img src="https://github.com/refa3ydev-dotNet/Zakarni/tree/fabb2d4e6083a476f460cdda75a965395583072f/data/Settings.png" alt="Settings" /> |
 
 ## 🛠️ Tech Stack
 
