@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="Zakarni.Core/Zakarni.Core.csproj" />
+  <Project Path="Zakarni.UI/Zakarni.UI.csproj" />
+</Solution>

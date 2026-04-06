@@ -1,0 +1,19 @@
+<root>
+  <data name="NavDashboard.Content" xml:space="preserve"><value>Dashboard</value></data>
+  <data name="NavQuran.Content" xml:space="preserve"><value>Quran</value></data>
+  <data name="NavTodo.Content" xml:space="preserve"><value>Routine</value></data>
+  <data name="NavAthkar.Content" xml:space="preserve"><value>Athkar</value></data>
+  <data name="GreetingText.Text" xml:space="preserve"><value>Assalamu Alaikum</value></data>
+  <data name="NextPrayerHeader.Text" xml:space="preserve"><value>Next Prayer</value></data>
+  <data name="SetReminderBtn.Content" xml:space="preserve"><value>Set Reminder</value></data>
+  <data name="RoutineTitle.Text" xml:space="preserve"><value>Spiritual Routine</value></data>
+  <data name="AddTaskPlaceholder.PlaceholderText" xml:space="preserve"><value>Add a goal...</value></data>
+  <data name="ApplyChangesBtn.Content" xml:space="preserve"><value>Apply Changes</value></data>
+  <data name="OpenMushafBtn.Content" xml:space="preserve"><value>Open Mushaf Mode</value></data>
+  <data name="Fajr" xml:space="preserve"><value>Fajr</value></data>
+  <data name="Sunrise" xml:space="preserve"><value>Sunrise</value></data>
+  <data name="Dhuhr" xml:space="preserve"><value>Dhuhr</value></data>
+  <data name="Asr" xml:space="preserve"><value>Asr</value></data>
+  <data name="Maghrib" xml:space="preserve"><value>Maghrib</value></data>
+  <data name="Isha" xml:space="preserve"><value>Isha</value></data>
+</root>

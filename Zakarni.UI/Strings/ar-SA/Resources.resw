@@ -1,0 +1,19 @@
+<root>
+  <data name="NavDashboard.Content" xml:space="preserve"><value>لوحة التحكم</value></data>
+  <data name="NavQuran.Content" xml:space="preserve"><value>القرآن الكريم</value></data>
+  <data name="NavTodo.Content" xml:space="preserve"><value>الروتين</value></data>
+  <data name="NavAthkar.Content" xml:space="preserve"><value>الأذكار</value></data>
+  <data name="GreetingText.Text" xml:space="preserve"><value>السلام عليكم</value></data>
+  <data name="NextPrayerHeader.Text" xml:space="preserve"><value>الصلاة القادمة</value></data>
+  <data name="SetReminderBtn.Content" xml:space="preserve"><value>ضبط التذكير</value></data>
+  <data name="RoutineTitle.Text" xml:space="preserve"><value>الروتين الروحاني</value></data>
+  <data name="AddTaskPlaceholder.PlaceholderText" xml:space="preserve"><value>أضف هدفاً...</value></data>
+  <data name="ApplyChangesBtn.Content" xml:space="preserve"><value>تطبيق التغييرات</value></data>
+  <data name="OpenMushafBtn.Content" xml:space="preserve"><value>فتح المصحف</value></data>
+  <data name="Fajr" xml:space="preserve"><value>الفجر</value></data>
+  <data name="Sunrise" xml:space="preserve"><value>الشروق</value></data>
+  <data name="Dhuhr" xml:space="preserve"><value>الظهر</value></data>
+  <data name="Asr" xml:space="preserve"><value>العصر</value></data>
+  <data name="Maghrib" xml:space="preserve"><value>المغرب</value></data>
+  <data name="Isha" xml:space="preserve"><value>العشاء</value></data>
+</root>

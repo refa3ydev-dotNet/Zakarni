@@ -1,0 +1,186 @@
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!-- 
+        ========================================================================
+        ZAKARNI PREMIUM ISLAMIC THEME (WINUI 3 NATIVE)
+        Colors: Emerald Green, Soft Gold, Deep Dark Gray, Soft Sky Blue
+        ======================================================================== 
+    -->
+
+    <ResourceDictionary.ThemeDictionaries>
+        <!-- LIGHT THEME -->
+        <ResourceDictionary x:Key="Light">
+            <Color x:Key="BrandPrimaryColor">#10B981</Color>     <!-- Emerald Green -->
+            <Color x:Key="BrandSecondaryColor">#064E3B</Color>   <!-- Deep Forest Green -->
+            <Color x:Key="BrandAccentColor">#F5C469</Color>      <!-- Soft Gold -->
+            <Color x:Key="BrandAccentAlphaColor">#1AF5C469</Color> <!-- 10% Opacity Gold -->
+            <Color x:Key="SurfaceBackground">#F9FAFB</Color>     <!-- Very Light Gray -->
+            <Color x:Key="SurfaceCardBackground">#FFFFFF</Color> <!-- Pure White -->
+            <Color x:Key="SurfaceBorderColor">#E5E7EB</Color>
+            
+            <Color x:Key="TextPrimaryColor">#111827</Color>      <!-- Very Dark Gray -->
+            <Color x:Key="TextSecondaryColor">#6B7280</Color>    <!-- Medium Gray -->
+
+            <!-- SolidColorBrushes for Light -->
+            <SolidColorBrush x:Key="BrandPrimaryBrush" Color="{StaticResource BrandPrimaryColor}"/>
+            <SolidColorBrush x:Key="BrandSecondaryBrush" Color="{StaticResource BrandSecondaryColor}"/>
+            <SolidColorBrush x:Key="BrandAccentBrush" Color="{StaticResource BrandAccentColor}"/>
+            <SolidColorBrush x:Key="BrandAccentAlphaBrush" Color="{StaticResource BrandAccentAlphaColor}"/>
+            <SolidColorBrush x:Key="CardBackgroundBrush" Color="{StaticResource SurfaceCardBackground}"/>
+            <SolidColorBrush x:Key="CardBorderBrush" Color="{StaticResource SurfaceBorderColor}"/>
+            <SolidColorBrush x:Key="TextPrimaryBrush" Color="{StaticResource TextPrimaryColor}"/>
+            <SolidColorBrush x:Key="TextSecondaryBrush" Color="{StaticResource TextSecondaryColor}"/>
+            
+            <!-- Acrylic Brushes for depth -->
+            <AcrylicBrush x:Key="PremiumCardAcrylicBrush" TintColor="{StaticResource SurfaceCardBackground}" TintOpacity="0.8" FallbackColor="{StaticResource SurfaceCardBackground}"/>
+            <AcrylicBrush x:Key="PremiumHeroAcrylicBrush" TintColor="{StaticResource BrandSecondaryColor}" TintOpacity="0.85" FallbackColor="{StaticResource BrandSecondaryColor}"/>
+
+            <!-- Legacy Aliases for MainViewModel -->
+            <StaticResource x:Key="TextFillColorPrimaryBrush" ResourceKey="TextPrimaryBrush"/>
+        </ResourceDictionary>
+
+        <!-- DARK THEME (The primary focus for the premium, spiritual vibe) -->
+        <ResourceDictionary x:Key="Dark">
+            <Color x:Key="BrandPrimaryColor">#10B981</Color>     <!-- Emerald Green -->
+            <Color x:Key="BrandSecondaryColor">#064E3B</Color>   <!-- Deep Forest Green -->
+            <Color x:Key="BrandAccentColor">#F5C469</Color>      <!-- Soft Gold -->
+            <Color x:Key="BrandAccentAlphaColor">#1AF5C469</Color> <!-- 10% Opacity Gold -->
+            <Color x:Key="SurfaceBackground">#0F0F0F</Color>     <!-- Deep Dark -->
+            <Color x:Key="SurfaceCardBackground">#1A1A1A</Color> <!-- Slightly lighter for Cards -->
+            <Color x:Key="SurfaceBorderColor">#2A2A2A</Color>
+
+            <Color x:Key="TextPrimaryColor">#F9FAFB</Color>      <!-- Off-White -->
+            <Color x:Key="TextSecondaryColor">#9CA3AF</Color>    <!-- Light Gray -->
+
+            <!-- SolidColorBrushes for Dark -->
+            <SolidColorBrush x:Key="BrandPrimaryBrush" Color="{StaticResource BrandPrimaryColor}"/>
+            <SolidColorBrush x:Key="BrandSecondaryBrush" Color="{StaticResource BrandSecondaryColor}"/>
+            <SolidColorBrush x:Key="BrandAccentBrush" Color="{StaticResource BrandAccentColor}"/>
+            <SolidColorBrush x:Key="BrandAccentAlphaBrush" Color="{StaticResource BrandAccentAlphaColor}"/>
+            <SolidColorBrush x:Key="CardBackgroundBrush" Color="{StaticResource SurfaceCardBackground}"/>
+            <SolidColorBrush x:Key="CardBorderBrush" Color="{StaticResource SurfaceBorderColor}"/>
+            <SolidColorBrush x:Key="TextPrimaryBrush" Color="{StaticResource TextPrimaryColor}"/>
+            <SolidColorBrush x:Key="TextSecondaryBrush" Color="{StaticResource TextSecondaryColor}"/>
+
+            <!-- Acrylic Brushes for depth -->
+            <AcrylicBrush x:Key="PremiumCardAcrylicBrush" TintColor="{StaticResource SurfaceCardBackground}" TintOpacity="0.6" FallbackColor="{StaticResource SurfaceCardBackground}"/>
+            <AcrylicBrush x:Key="PremiumHeroAcrylicBrush" TintColor="{StaticResource BrandSecondaryColor}" TintOpacity="0.7" FallbackColor="{StaticResource BrandSecondaryColor}"/>
+
+            <!-- Legacy Aliases for MainViewModel -->
+            <StaticResource x:Key="TextFillColorPrimaryBrush" ResourceKey="TextPrimaryBrush"/>
+        </ResourceDictionary>
+
+        <ResourceDictionary x:Key="HighContrast">
+            <!-- Fallbacks for high contrast if needed -->
+        </ResourceDictionary>
+    </ResourceDictionary.ThemeDictionaries>
+
+    <!-- 
+        ========================================================================
+        TYPOGRAPHY
+        ======================================================================== 
+    -->
+    <FontFamily x:Key="PrimaryFont">Segoe UI Variable Display, Segoe UI, sans-serif</FontFamily>
+    <FontFamily x:Key="QuranFont">KFGQPC Uthman Taha Naskh, Amiri, Segoe UI, sans-serif</FontFamily>
+
+    <Style x:Key="PremiumHeaderStyle" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="{StaticResource PrimaryFont}"/>
+        <Setter Property="FontSize" Value="36"/>
+        <Setter Property="FontWeight" Value="SemiBold"/>
+        <Setter Property="Foreground" Value="{ThemeResource TextPrimaryBrush}"/>
+        <Setter Property="CharacterSpacing" Value="25"/>
+    </Style>
+
+    <Style x:Key="PremiumSubheaderStyle" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="{StaticResource PrimaryFont}"/>
+        <Setter Property="FontSize" Value="20"/>
+        <Setter Property="FontWeight" Value="Medium"/>
+        <Setter Property="Foreground" Value="{ThemeResource TextSecondaryBrush}"/>
+    </Style>
+
+    <Style x:Key="PremiumBodyStyle" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="{StaticResource PrimaryFont}"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="Foreground" Value="{ThemeResource TextPrimaryBrush}"/>
+    </Style>
+
+    <Style x:Key="QuranTextStyle" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="{StaticResource QuranFont}"/>
+        <Setter Property="FontSize" Value="32"/>
+        <Setter Property="Foreground" Value="{ThemeResource TextPrimaryBrush}"/>
+        <Setter Property="TextAlignment" Value="Center"/>
+        <Setter Property="LineHeight" Value="56"/>
+    </Style>
+
+    <!-- 
+        ========================================================================
+        CONTROLS
+        ======================================================================== 
+    -->
+
+    <!-- Premium Card Style (Uses Acrylic for depth) -->
+    <Style x:Key="PremiumCardStyle" TargetType="Border">
+        <Setter Property="Background" Value="{ThemeResource PremiumCardAcrylicBrush}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource CardBorderBrush}"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="CornerRadius" Value="16"/>
+        <Setter Property="Margin" Value="8"/>
+    </Style>
+
+    <!-- Primary Accent Button -->
+    <Style x:Key="PremiumAccentButtonStyle" TargetType="Button">
+        <Setter Property="Background" Value="{ThemeResource BrandPrimaryBrush}"/>
+        <Setter Property="Foreground" Value="White"/> 
+        <Setter Property="CornerRadius" Value="12"/>
+        <Setter Property="Padding" Value="24,12"/>
+        <Setter Property="FontFamily" Value="{StaticResource PrimaryFont}"/>
+        <Setter Property="FontWeight" Value="SemiBold"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Grid x:Name="RootGrid" Background="{TemplateBinding Background}" CornerRadius="{TemplateBinding CornerRadius}">
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="Normal"/>
+                                <VisualState x:Name="PointerOver">
+                                    <Storyboard>
+                                        <DoubleAnimation Storyboard.TargetName="RootGrid" Storyboard.TargetProperty="Opacity" To="0.9" Duration="0:0:0.15"/>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="Pressed">
+                                    <Storyboard>
+                                        <DoubleAnimation Storyboard.TargetName="RootGrid" Storyboard.TargetProperty="Opacity" To="0.8" Duration="0:0:0.1"/>
+                                        <DoubleAnimation Storyboard.TargetName="ScaleTransform" Storyboard.TargetProperty="ScaleX" To="0.96" Duration="0:0:0.1"/>
+                                        <DoubleAnimation Storyboard.TargetName="ScaleTransform" Storyboard.TargetProperty="ScaleY" To="0.96" Duration="0:0:0.1"/>
+                                    </Storyboard>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                        <Grid.RenderTransform>
+                            <ScaleTransform x:Name="ScaleTransform" CenterX="50" CenterY="20"/>
+                        </Grid.RenderTransform>
+                        <ContentPresenter x:Name="ContentPresenter"
+                                          Content="{TemplateBinding Content}"
+                                          ContentTemplate="{TemplateBinding ContentTemplate}"
+                                          HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                          VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                          Padding="{TemplateBinding Padding}"/>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!-- Modern Navigation View Item Style -->
+    <Style x:Key="PremiumNavViewStyle" TargetType="NavigationView">
+        <Setter Property="IsPaneToggleButtonVisible" Value="True"/>
+        <Setter Property="OpenPaneLength" Value="240"/>
+        <Setter Property="CompactPaneLength" Value="64"/>
+        <Setter Property="PaneDisplayMode" Value="LeftCompact"/>
+        <Setter Property="Background" Value="Transparent"/> 
+    </Style>
+
+</ResourceDictionary>

@@ -1,0 +1,12 @@
+﻿  Determining projects to restore...
+  Restored C:\Users\omarr\OneDrive\╪º┘ä┘à╪│╪¬┘å╪»╪º╪¬\Zakarni\Zakarni.Core\Zakarni.Core.csproj (in 6.31 sec).
+  Restored C:\Users\omarr\OneDrive\╪º┘ä┘à╪│╪¬┘å╪»╪º╪¬\Zakarni\Zakarni.UI\Zakarni.UI.csproj (in 6.36 sec).
+C:\Users\omarr\.nuget\packages\microsoft.windowsappsdk\1.5.240627000\buildTransitive\Microsoft.WindowsAppSDK.SelfContained.targets(36,9): error : The platform 'AnyCPU' is not supported for Self Contained mode. [C:\Users\omarr\OneDrive\╪º┘ä┘à╪│╪¬┘å╪»╪º╪¬\Zakarni\Zakarni.UI\Zakarni.UI.csproj]
+
+Build FAILED.
+
+C:\Users\omarr\.nuget\packages\microsoft.windowsappsdk\1.5.240627000\buildTransitive\Microsoft.WindowsAppSDK.SelfContained.targets(36,9): error : The platform 'AnyCPU' is not supported for Self Contained mode. [C:\Users\omarr\OneDrive\╪º┘ä┘à╪│╪¬┘å╪»╪º╪¬\Zakarni\Zakarni.UI\Zakarni.UI.csproj]
+    0 Warning(s)
+    1 Error(s)
+
+Time Elapsed 00:00:08.93
