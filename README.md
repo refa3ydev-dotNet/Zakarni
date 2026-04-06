@@ -48,7 +48,7 @@ Whether you need precise prayer times, a quick way to read the Quran, daily Athk
 
 | Floating Widget | Settings |
 |:---:|:---:|
-| <img src="https://github.com/refa3ydev-dotNet/Zakarni/tree/fabb2d4e6083a476f460cdda75a965395583072f/data/floating Wedgit.png" alt="Widget" />| <img src="https://github.com/refa3ydev-dotNet/Zakarni/tree/fabb2d4e6083a476f460cdda75a965395583072f/data/floating Wedgit-1.png" alt="Widget" />| <img src="https://github.com/refa3ydev-dotNet/Zakarni/tree/fabb2d4e6083a476f460cdda75a965395583072f/data/floating Wedgit-2.png" alt="Widget" /> | <img src="https://github.com/refa3ydev-dotNet/Zakarni/tree/fabb2d4e6083a476f460cdda75a965395583072f/data/Settings.png" alt="Settings" /> |
+| <img src="data/floating Wedgit.png" alt="Widget" />| <img src="data/floating Wedgit-1.png" alt="Widget" />| <img src="data/floating Wedgit-2.png" alt="Widget" /> | <img src="data/Settings.png" alt="Settings" /> |
 
 ## 🛠️ Tech Stack
 
