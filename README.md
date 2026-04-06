@@ -74,11 +74,3 @@ Whether you need precise prayer times, a quick way to read the Quran, daily Athk
 1. Go to the [Releases page](https://github.com/refa3ydev-dotNet/Zakarni/releases/tag/Zakarni).              │
 2. Download the latest `Zakarni.zip` or `.exe` installer.           │
 3. Extract the contents (if zip) and run `Zakarni.UI.exe`.   
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-<div align="center">
-  <i>"Remember Me; I will remember you." (Quran 2:152)</i>
-</div>
