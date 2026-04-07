@@ -63,12 +63,8 @@ Whether you need precise prayer times, a quick way to read the Quran, daily Athk
   * `H.NotifyIcon` (For System Tray functionality)
   * `Adhan.cs` (For prayer time calculations)
 
-## 📦 Installation & Build
-
 ### Prerequisites
 * Windows 10 (Version 1809 or later) or Windows 11.
-* [Visual Studio 2022](https://visualstudio.microsoft.com/) (17.8+) with the **.NET desktop development** and **Windows application development** workloads installed.
-* .NET 8.0 SDK.
 
 ### How to Download
 1. Go to the [Releases page](https://github.com/refa3ydev-dotNet/Zakarni/releases/tag/Zakarni).              │

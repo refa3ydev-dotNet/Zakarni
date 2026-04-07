@@ -61,6 +61,10 @@ public partial class MainViewModel : ObservableObject
     [ObservableProperty] private string _widgetTitle = "";
     [ObservableProperty] private Brush _widgetTitleColor = null!;
     [ObservableProperty] private Brush _widgetProgressColor = null!;
+    [ObservableProperty] private Brush _widgetSubtitleColor = null!;
+    [ObservableProperty] private Brush _widgetTimeRemainingColor = null!;
+    [ObservableProperty] private Brush _widgetTimeRemainingLabelColor = null!;
+    [ObservableProperty] private string _widgetTimeRemainingLabel = "REMAINING";
 
     // Active row highlight
     [ObservableProperty] private string _activePrayer = "";
@@ -364,6 +368,8 @@ public partial class MainViewModel : ObservableObject
         var primaryBrush = (Brush)Application.Current.Resources["BrandPrimaryBrush"] ?? new SolidColorBrush(Microsoft.UI.Colors.Green);
         var accentBrush = (Brush)Application.Current.Resources["BrandAccentBrush"] ?? new SolidColorBrush(Microsoft.UI.Colors.Gold);
         var warningBrush = new SolidColorBrush(Microsoft.UI.ColorHelper.FromArgb(255, 239, 68, 68)); // Red/Warning
+        var primaryTextBrush = (Brush)Application.Current.Resources["TextFillColorPrimaryBrush"] ?? new SolidColorBrush(Microsoft.UI.Colors.White);
+        var secondaryTextBrush = (Brush)Application.Current.Resources["TextFillColorSecondaryBrush"] ?? new SolidColorBrush(Microsoft.UI.Colors.Gray);
 
         string currentLocalizedNext = GetLocalizedPrayerNameSafe(_data.NextPrayerName);
         string currentLocalizedPrev = GetLocalizedPrayerNameSafe(prevPrayerNameStr);
@@ -384,15 +390,23 @@ public partial class MainViewModel : ObservableObject
                 WidgetSubtitle = "IT IS TIME FOR";
                 WidgetTitle = currentLocalizedPrev;
                 TimeRemaining = "Pray Now";
+                WidgetTimeRemainingLabel = "";
                 WidgetTitleColor = accentBrush;
                 WidgetProgressColor = primaryBrush;
+                WidgetSubtitleColor = secondaryTextBrush;
+                WidgetTimeRemainingColor = primaryTextBrush;
+                WidgetTimeRemainingLabelColor = secondaryTextBrush;
             }
             else if (delta.TotalHours < 1.0)
             {
                 WidgetSubtitle = $"DID YOU PRAY {currentLocalizedPrev.ToUpper()}?";
                 WidgetTitle = currentLocalizedNext;
+                WidgetTimeRemainingLabel = "REMAINING";
                 WidgetTitleColor = warningBrush;
                 WidgetProgressColor = warningBrush;
+                WidgetSubtitleColor = warningBrush;
+                WidgetTimeRemainingColor = warningBrush;
+                WidgetTimeRemainingLabelColor = warningBrush;
 
                 // 1-Hour Notification logic
                 if (now.Subtract(_last1HourNotificationTime).TotalMinutes > 60 && delta.TotalMinutes <= 60 && delta.TotalMinutes > 59)
@@ -409,8 +423,12 @@ public partial class MainViewModel : ObservableObject
             {
                 WidgetSubtitle = "NEXT PRAYER";
                 WidgetTitle = currentLocalizedNext;
+                WidgetTimeRemainingLabel = "REMAINING";
                 WidgetTitleColor = primaryBrush;
                 WidgetProgressColor = accentBrush;
+                WidgetSubtitleColor = accentBrush;
+                WidgetTimeRemainingColor = primaryTextBrush;
+                WidgetTimeRemainingLabelColor = secondaryTextBrush;
             }
         }
         else
@@ -422,8 +440,12 @@ public partial class MainViewModel : ObservableObject
             
             WidgetSubtitle = "IT IS TIME FOR";
             WidgetTitle = currentLocalizedNext;
+            WidgetTimeRemainingLabel = "NOW";
             WidgetTitleColor = accentBrush;
             WidgetProgressColor = primaryBrush;
+            WidgetSubtitleColor = secondaryTextBrush;
+            WidgetTimeRemainingColor = accentBrush;
+            WidgetTimeRemainingLabelColor = accentBrush;
         }
     }
 

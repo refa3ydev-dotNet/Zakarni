@@ -17,10 +17,25 @@ public class AudioService : IAudioService
 
     public Task PlayAdhanAsync()
     {
-        // Stream directly without blocking UI
-        var uri = new Uri("https://download.quranicaudio.com/adhan/makkah.mp3");
-        _mediaPlayer.Source = MediaSource.CreateFromUri(uri);
-        _mediaPlayer.Play();
+        // Prevent overlapping audio if already playing
+        if (_mediaPlayer.PlaybackSession.PlaybackState == MediaPlaybackState.Playing)
+        {
+            return Task.CompletedTask;
+        }
+
+        try
+        {
+            // Resolve the absolute path to the deployed asset
+            string filePath = System.IO.Path.Combine(AppContext.BaseDirectory, "Assets", "allah akbar.mp3");
+            if (System.IO.File.Exists(filePath))
+            {
+                var uri = new Uri(filePath, UriKind.Absolute);
+                _mediaPlayer.Source = MediaSource.CreateFromUri(uri);
+                _mediaPlayer.Play();
+            }
+        }
+        catch { /* Silently fallback if audio hardware is unavailable */ }
+        
         return Task.CompletedTask;
     }
 
