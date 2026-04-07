@@ -43,11 +43,14 @@ Whether you need precise prayer times, a quick way to read the Quran, daily Athk
 
 | Dashboard (Dark Mode) | Quran Reader |
 |:---:|:---:|
-| <img src="https://via.placeholder.com/600x350.png?text=Dashboard+Screenshot" alt="Dashboard" /> | <img src="https://via.placeholder.com/600x350.png?text=Quran+Reader+Screenshot" alt="Quran Reader" /> |
+| <img src="data/Dashboard.png" alt="Dashboard" /> |
+<img src="data/Quran Reader.png" alt="Quran Reader" /> |
 
 | Floating Widget | Settings |
 |:---:|:---:|
-| <img src="https://via.placeholder.com/600x350.png?text=Widget+Screenshot" alt="Widget" /> | <img src="https://via.placeholder.com/600x350.png?text=Settings+Screenshot" alt="Settings" /> |
+| <img src="data/floating Wedgit.png" alt="Widget" />| |
+| <img src="data/floating Wedgit-2.png" alt="Widget" /> | <img src="data/Settings.png" alt="Settings" /> |
+|<img src="data/floating Wedgit-1.png" alt="Widget" />||
 
 ## 🛠️ Tech Stack
 
@@ -60,37 +63,10 @@ Whether you need precise prayer times, a quick way to read the Quran, daily Athk
   * `H.NotifyIcon` (For System Tray functionality)
   * `Adhan.cs` (For prayer time calculations)
 
-## 📦 Download & Installation
-
 ### Prerequisites
 * Windows 10 (Version 1809 or later) or Windows 11.
 
-### Download
-
-The easiest way to use Zakarni is to download the latest compiled version.
-
-1. Go to the [Releases page](https://github.com/yourusername/Zakarni/releases).
-2. Download the latest `Zakarni.zip` or `.exe` installer.
-3. Extract the contents (if zip) and run `Zakarni.UI.exe`.
-
-*Note: You may need to accept the Windows SmartScreen prompt if the application is not yet signed with an EV certificate. Click "More info" -> "Run anyway".*
-
-## 🤝 Contributing
-
-Contributions, issues, and feature requests are welcome! 
-Feel free to check [issues page](https://github.com/yourusername/Zakarni/issues) if you want to contribute.
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-<div align="center">
-  <i>"Remember Me; I will remember you." (Quran 2:152)</i>
-</div>
+### How to Download
+1. Go to the [Releases page](https://github.com/refa3ydev-dotNet/Zakarni/releases/tag/Zakarni).              │
+2. Download the latest `Zakarni.zip` or `.exe` installer.           │
+3. Extract the contents (if zip) and run `Zakarni.UI.exe`.   
