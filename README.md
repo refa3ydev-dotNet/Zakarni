@@ -60,29 +60,20 @@ Whether you need precise prayer times, a quick way to read the Quran, daily Athk
   * `H.NotifyIcon` (For System Tray functionality)
   * `Adhan.cs` (For prayer time calculations)
 
-## 📦 Installation & Build
+## 📦 Download & Installation
 
 ### Prerequisites
 * Windows 10 (Version 1809 or later) or Windows 11.
-* [Visual Studio 2022](https://visualstudio.microsoft.com/) (17.8+) with the **.NET desktop development** and **Windows application development** workloads installed.
-* .NET 8.0 SDK.
 
-### Building from Source
+### Download
 
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/yourusername/Zakarni.git
-   cd Zakarni
-   ```
+The easiest way to use Zakarni is to download the latest compiled version.
 
-2. **Open the Solution:**
-   Open `Zakarni.slnx` or `Zakarni.sln` in Visual Studio 2022.
+1. Go to the [Releases page](https://github.com/yourusername/Zakarni/releases).
+2. Download the latest `Zakarni.zip` or `.exe` installer.
+3. Extract the contents (if zip) and run `Zakarni.UI.exe`.
 
-3. **Restore Dependencies:**
-   Visual Studio should automatically restore NuGet packages. If not, right-click the solution and select "Restore NuGet Packages".
-
-4. **Build and Run:**
-   Set `Zakarni.UI` as the Startup Project. Select your target architecture (e.g., `x64`) and click **Start (F5)** to build and launch the application.
+*Note: You may need to accept the Windows SmartScreen prompt if the application is not yet signed with an EV certificate. Click "More info" -> "Run anyway".*
 
 ## 🤝 Contributing
 

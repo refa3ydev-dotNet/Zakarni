@@ -6,66 +6,171 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="Transparent" PointerPressed="OnPointerPressed" Padding="8">
-        <!-- Floating Acrylic Pill -->
-        <Border CornerRadius="16" 
-                Background="{ThemeResource PremiumCardAcrylicBrush}" 
-                BorderBrush="#20FFFFFF" 
-                BorderThickness="1" 
-                Padding="16,0"
-                HorizontalAlignment="Stretch" 
-                VerticalAlignment="Stretch">
-            
+    <!-- Root Grid with BackgroundSizing="OuterBorderEdge" to ensure no 1px gaps at the window edges -->
+    <Grid Background="Transparent" PointerPressed="OnPointerPressed" Padding="0" RequestedTheme="Dark" BackgroundSizing="OuterBorderEdge">
+        <Grid.Resources>
+            <!-- Clean completely borderless button style for the widget -->
+            <Style x:Key="WidgetIconButtonStyle" TargetType="Button">
+                <Setter Property="Background" Value="Transparent"/>
+                <Setter Property="BorderThickness" Value="0"/>
+                <Setter Property="Padding" Value="0"/>
+                <Setter Property="CornerRadius" Value="8"/>
+                <Setter Property="UseSystemFocusVisuals" Value="False"/>
+                <Setter Property="Width" Value="36"/>
+                <Setter Property="Height" Value="36"/>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="Button">
+                            <Grid x:Name="RootGrid" Background="{TemplateBinding Background}" CornerRadius="{TemplateBinding CornerRadius}" BackgroundSizing="OuterBorderEdge">
+                                <VisualStateManager.VisualStateGroups>
+                                    <VisualStateGroup x:Name="CommonStates">
+                                        <VisualState x:Name="Normal"/>
+                                        <VisualState x:Name="PointerOver">
+                                            <Storyboard>
+                                                <ColorAnimation Storyboard.TargetName="RootGrid" Storyboard.TargetProperty="(Grid.Background).(SolidColorBrush.Color)" To="#1AFFFFFF" Duration="0:0:0.1"/>
+                                            </Storyboard>
+                                        </VisualState>
+                                        <VisualState x:Name="Pressed">
+                                            <Storyboard>
+                                                <ColorAnimation Storyboard.TargetName="RootGrid" Storyboard.TargetProperty="(Grid.Background).(SolidColorBrush.Color)" To="#0DFFFFFF" Duration="0:0:0.05"/>
+                                                <DoubleAnimation Storyboard.TargetName="ContentPresenter" Storyboard.TargetProperty="Opacity" To="0.7" Duration="0:0:0.05"/>
+                                            </Storyboard>
+                                        </VisualState>
+                                    </VisualStateGroup>
+                                </VisualStateManager.VisualStateGroups>
+                                <ContentPresenter x:Name="ContentPresenter" Content="{TemplateBinding Content}" ContentTemplate="{TemplateBinding ContentTemplate}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Grid>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        </Grid.Resources>
+        
+        <!-- Main floating card with a very subtle 1px inner stroke to give a premium glass bevel.
+             Margin="1" ensures the border doesn't bleed into the DWM 1px system boundary. -->
+        <Border
+            CornerRadius="16"
+            Background="#A6000000"
+            BorderBrush="#1AFFFFFF"
+            BorderThickness="1"
+            Padding="20,12"
+            Margin="1"
+            BackgroundSizing="InnerBorderEdge"
+            HorizontalAlignment="Stretch"
+            VerticalAlignment="Stretch">
+
             <Grid>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto"/> <!-- Icon -->
-                    <ColumnDefinition Width="*"/>    <!-- Progress & Text -->
-                    <ColumnDefinition Width="Auto"/> <!-- Time -->
-                    <ColumnDefinition Width="Auto"/> <!-- Actions -->
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
                 </Grid.ColumnDefinitions>
 
-                <!-- Elegant Circular Icon -->
-                <Border Width="32" Height="32" Background="{ThemeResource BrandAccentAlphaBrush}" BorderBrush="{ThemeResource BrandAccentBrush}" BorderThickness="1" CornerRadius="16" VerticalAlignment="Center" Margin="0,0,16,0">
-                    <FontIcon Glyph="&#xE706;" FontSize="14" Foreground="{ThemeResource BrandAccentBrush}"/>
+                <!-- Icon -->
+                <Border
+                    Width="44"
+                    Height="44"
+                    Background="{ThemeResource BrandAccentAlphaBrush}"
+                    CornerRadius="22"
+                    VerticalAlignment="Center"
+                    Margin="0,0,16,0">
+                    <FontIcon
+                        Glyph="&#xE706;"
+                        FontSize="18"
+                        Foreground="{ThemeResource BrandAccentBrush}"/>
                 </Border>
 
-                <!-- Main Content -->
-                <StackPanel Grid.Column="1" VerticalAlignment="Center" Margin="0,0,16,0" Spacing="4">
+                <!-- Texts and Progress -->
+                <StackPanel
+                    Grid.Column="1"
+                    VerticalAlignment="Center"
+                    Margin="0,0,24,0"
+                    Spacing="4">
+
                     <StackPanel Orientation="Horizontal" Spacing="8" VerticalAlignment="Bottom">
-                        <TextBlock Text="{x:Bind ViewModel.WidgetTitle, Mode=OneWay}" FontFamily="{StaticResource PrimaryFont}" FontWeight="SemiBold" FontSize="16" Foreground="{x:Bind ViewModel.WidgetTitleColor, Mode=OneWay}" Margin="0,0,0,-2"/>
-                        <TextBlock Text="{x:Bind ViewModel.WidgetSubtitle, Mode=OneWay}" FontSize="10" Foreground="{ThemeResource TextSecondaryBrush}" Opacity="0.8" VerticalAlignment="Bottom" CharacterSpacing="50"/>
+                        <TextBlock
+                            Text="{x:Bind ViewModel.WidgetTitle, Mode=OneWay}"
+                            FontFamily="{StaticResource PrimaryFont}"
+                            FontWeight="SemiBold"
+                            FontSize="16"
+                            Foreground="{x:Bind ViewModel.WidgetTitleColor, Mode=OneWay}"
+                            Margin="0,0,0,-2"/>
+
+                        <TextBlock
+                            Text="{x:Bind ViewModel.WidgetSubtitle, Mode=OneWay}"
+                            FontSize="11"
+                            FontWeight="Medium"
+                            Foreground="{x:Bind ViewModel.WidgetSubtitleColor, Mode=OneWay}"
+                            Opacity="0.8"
+                            VerticalAlignment="Bottom"
+                            CharacterSpacing="50"/>
                     </StackPanel>
-                    
-                    <ProgressBar Value="{x:Bind ViewModel.HeroProgressValue, Mode=OneWay}" Maximum="{x:Bind ViewModel.HeroProgressMax, Mode=OneWay}" Foreground="{x:Bind ViewModel.WidgetProgressColor, Mode=OneWay}" Background="#1AFFFFFF" Height="2" CornerRadius="1" HorizontalAlignment="Stretch"/>
+
+                    <!-- Premium Progress Bar with reduced height for elegance -->
+                    <ProgressBar
+                        Value="{x:Bind ViewModel.HeroProgressValue, Mode=OneWay}"
+                        Maximum="{x:Bind ViewModel.HeroProgressMax, Mode=OneWay}"
+                        Foreground="{x:Bind ViewModel.WidgetProgressColor, Mode=OneWay}"
+                        Background="#1AFFFFFF"
+                        Height="3"
+                        CornerRadius="1.5"
+                        HorizontalAlignment="Stretch"/>
                 </StackPanel>
 
                 <!-- Countdown -->
-                <TextBlock Grid.Column="2" Text="{x:Bind ViewModel.TimeRemaining, Mode=OneWay}" FontSize="20" FontWeight="SemiBold" Foreground="{x:Bind ViewModel.WidgetTitleColor, Mode=OneWay}" VerticalAlignment="Center" Margin="0,0,16,0" FontFamily="Consolas, Segoe UI"/>
+                <StackPanel
+                    Grid.Column="2"
+                    VerticalAlignment="Center"
+                    Margin="0,0,24,0"
+                    Spacing="0">
+                    <TextBlock
+                        Text="{x:Bind ViewModel.TimeRemaining, Mode=OneWay}"
+                        FontSize="22"
+                        FontWeight="SemiBold"
+                        Foreground="{x:Bind ViewModel.WidgetTimeRemainingColor, Mode=OneWay}"
+                        HorizontalAlignment="Right"
+                        FontFamily="Consolas, Segoe UI"/>
+
+                    <TextBlock
+                        Text="{x:Bind ViewModel.WidgetTimeRemainingLabel, Mode=OneWay}"
+                        FontSize="9"
+                        FontWeight="Medium"
+                        Foreground="{x:Bind ViewModel.WidgetTimeRemainingLabelColor, Mode=OneWay}"
+                        HorizontalAlignment="Right"
+                        CharacterSpacing="100"/>
+                </StackPanel>
 
                 <!-- Actions -->
-                <StackPanel Grid.Column="3" Orientation="Horizontal" Spacing="4" VerticalAlignment="Center">
-                    <Button Background="Transparent" BorderThickness="0" CornerRadius="14" Width="28" Height="28" Padding="0" Click="OnOpenMain" ToolTipService.ToolTip="Open Dashboard">
-                        <FontIcon Glyph="&#xE8A7;" FontSize="12" Foreground="{ThemeResource TextSecondaryBrush}"/>
+                <StackPanel
+                    Grid.Column="3"
+                    Orientation="Horizontal"
+                    Spacing="4"
+                    VerticalAlignment="Center">
+
+                    <Button
+                        Style="{StaticResource WidgetIconButtonStyle}"
+                        Click="OnOpenMain"
+                        ToolTipService.ToolTip="Open Dashboard">
+                        <FontIcon Glyph="&#xE8A7;" FontSize="14" Foreground="{ThemeResource TextFillColorSecondaryBrush}"/>
                     </Button>
-                    <Button Background="Transparent" BorderThickness="0" CornerRadius="14" Width="28" Height="28" Padding="0" ToolTipService.ToolTip="Options">
-                        <FontIcon Glyph="&#xE10C;" FontSize="12" Foreground="{ThemeResource TextSecondaryBrush}"/>
+
+                    <Button
+                        Style="{StaticResource WidgetIconButtonStyle}"
+                        ToolTipService.ToolTip="Options">
+                        <FontIcon Glyph="&#xE10C;" FontSize="14" Foreground="{ThemeResource TextFillColorSecondaryBrush}"/>
+
                         <Button.Flyout>
                             <MenuFlyout>
                                 <MenuFlyoutItem Text="Open Dashboard" Command="{x:Bind ViewModel.ShowAppCommand}">
-                                    <MenuFlyoutItem.Icon>
-                                        <FontIcon Glyph="&#xE8A7;"/>
-                                    </MenuFlyoutItem.Icon>
+                                    <MenuFlyoutItem.Icon><FontIcon Glyph="&#xE8A7;"/></MenuFlyoutItem.Icon>
                                 </MenuFlyoutItem>
                                 <MenuFlyoutItem Text="Mute Next Adhan" Command="{x:Bind ViewModel.MuteNextAdhanCommand}">
-                                    <MenuFlyoutItem.Icon>
-                                        <FontIcon Glyph="&#xE198;"/>
-                                    </MenuFlyoutItem.Icon>
+                                    <MenuFlyoutItem.Icon><FontIcon Glyph="&#xE198;"/></MenuFlyoutItem.Icon>
                                 </MenuFlyoutItem>
                                 <MenuFlyoutSeparator/>
                                 <MenuFlyoutItem Text="Exit Zakarni" Command="{x:Bind ViewModel.ExitAppCommand}">
-                                    <MenuFlyoutItem.Icon>
-                                        <FontIcon Glyph="&#xE106;"/>
-                                    </MenuFlyoutItem.Icon>
+                                    <MenuFlyoutItem.Icon><FontIcon Glyph="&#xE106;"/></MenuFlyoutItem.Icon>
                                 </MenuFlyoutItem>
                             </MenuFlyout>
                         </Button.Flyout>

@@ -10,11 +10,15 @@
     <LangVersion>13.0</LangVersion>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <WindowsPackageType>None</WindowsPackageType>
-    <WindowsAppSDKSelfContained>true</WindowsAppSDKSelfContained>
     <UseXamlCompilerExecutable>false</UseXamlCompilerExecutable>
     <SelfContained>true</SelfContained>
-    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+	  <WindowsPackageType>None</WindowsPackageType>
+<WindowsAppSDKSelfContained>true</WindowsAppSDKSelfContained>
+<RuntimeIdentifier>win-x64</RuntimeIdentifier>
+<ApplicationIcon>Assets\Zakarni.ico</ApplicationIcon>	  <WindowsAppSDKSelfContained>true</WindowsAppSDKSelfContained>
+	  <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+	  
+    <ApplicationIcon>Zakarni.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
@@ -36,6 +40,10 @@
     <Content Include="..\Assets\Zakarni.ico" Link="Assets\Zakarni.ico">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="..\Assets\allah akbar.mp3" Link="Assets\allah akbar.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Zakarni.ico" />
     <Content Include="..\data\Quran\**\*.csv" Link="data\Quran\%(RecursiveDir)%(Filename)%(Extension)">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
