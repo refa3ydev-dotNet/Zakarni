@@ -67,6 +67,6 @@ Whether you need precise prayer times, a quick way to read the Quran, daily Athk
 * Windows 10 (Version 1809 or later) or Windows 11.
 
 ### How to Download
-1. Go to the [Releases page](https://github.com/refa3ydev-dotNet/Zakarni/releases/tag/Zakarni).              │
+1. Go to the [Releases page](https://github.com/refa3ydev-dotNet/Zakarni/releases/tag/Zakarni_v1.1.0).              │
 2. Download the latest `Zakarni.zip` or `.exe` installer.           │
 3. Extract the contents (if zip) and run `Zakarni.UI.exe`.   
