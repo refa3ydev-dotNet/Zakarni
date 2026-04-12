@@ -35,7 +35,7 @@ Whether you need precise prayer times, a quick way to read the Quran, daily Athk
 * ✅ **Islamic Task Manager:** Keep track of your daily religious goals and habits.
 * 🔔 **Adhan & Notifications:** Audio Adhan alerts and desktop notifications before and at prayer times.
 * 🌓 **Beautiful Theming:** Full support for Windows Light and Dark modes, utilizing Mica backdrops and Acrylic materials for a premium feel.
-* 🌍 **Bilingual Support:** Fully localized in both Arabic (RTL) and English (LTR).
+* 🌍 **Bilingual Support:** Fully localized in both Arabic (RTL) and English (LTR). 
 
 ## 📸 Screenshots
 
