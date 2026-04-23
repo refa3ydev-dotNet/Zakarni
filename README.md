@@ -16,7 +16,7 @@
     <a href="#screenshots">Screenshots</a> •
     <a href="#tech-stack">Tech Stack</a>
   </p>
-</div>
+</div> 
 
 ---
 
